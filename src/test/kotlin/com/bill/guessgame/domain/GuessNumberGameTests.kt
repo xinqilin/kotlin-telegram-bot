@@ -6,7 +6,8 @@ import org.junit.jupiter.api.Test
 class GuessNumberGameTests {
 
     @Test
-    internal  fun test(){
+    internal fun test() {
+        //測試3A
         //arrange
         val guessNumberGame = GuessNumberGame()
 
