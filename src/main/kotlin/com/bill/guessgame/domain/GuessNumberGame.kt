@@ -32,11 +32,10 @@ class GuessNumberGame {
             }
 
     private fun initPassword() =
-            (0..9)
-                    .toList()
+            (0..9).toList()
                     .shuffled()
                     .take(4)
-                    .joinToString { "" }
+                    .joinToString("")
                     .also {
                         logger.info("init password: $it")
                     }
