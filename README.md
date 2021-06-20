@@ -1,6 +1,6 @@
 ## Kotlin Guess Number Game
 
-``2021/06/20 14:00 跟著 b2etw Vincent 大實作``
+``2021/06/20 follow b2etw V大 實作``
 
 ### Dependency 
 
