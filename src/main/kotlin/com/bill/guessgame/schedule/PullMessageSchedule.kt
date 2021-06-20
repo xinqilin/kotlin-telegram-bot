@@ -16,7 +16,7 @@ class PullMessageSchedule {
 
     private val logger = LoggerFactory.getLogger(this::class.java)
 
-    private val webClient = WebClient.create("https://api.telegram.org/bot1849831221:AAFpkmHsvoDvSIOdAQod35AsN2lxq6p-mdU")
+    private val webClient = WebClient.create("https://api.telegram.org/bot")
 
     private val guessNumberGame = GuessNumberGame()
 
