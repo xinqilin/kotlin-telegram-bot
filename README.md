@@ -82,7 +82,7 @@ this version of the Java Runtime only recognizes class file versions up to 52.0
 
 ```
 
-### build docker image
+### build image
 
 - gradlew clean -> gradle folder is empty
 - gradlew build -> build success
