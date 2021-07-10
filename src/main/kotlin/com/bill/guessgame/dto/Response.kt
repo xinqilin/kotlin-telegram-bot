@@ -1,4 +1,8 @@
 package com.bill.guessgame.dto
 
-class Response {
-}
+//to be continued...
+
+
+//data class Response() {
+//
+//}

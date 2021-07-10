@@ -13,7 +13,7 @@ import org.springframework.web.reactive.function.client.awaitBody
 @Component
 class PullMessageSchedule {
 
-    private val token = ""
+    private var token = ""
 
     private val logger = LoggerFactory.getLogger(this::class.java)
 
@@ -29,11 +29,12 @@ class PullMessageSchedule {
         val result = messages.get("result").toList()
 
         if (result.isNotEmpty()) {
-            offset = result.last().get("update_id").longValue() + 1
+            offset = result.last().get("update_id").longValue() + 1L
 
             result.map {
                 val input = it.get("message").get("text").asText()
                 val chatId = it.get("message").get("from").get("id").longValue()
+
                 when {
                     "again".equals(input) -> Pair(chatId, guessNumberGame.again())
 
@@ -47,6 +48,10 @@ class PullMessageSchedule {
                 send(it.first, it.second)
             }
         }
+    }
+
+    private fun setToken(token: String) {
+        this.token = token
     }
 
     private suspend fun fetch() =
